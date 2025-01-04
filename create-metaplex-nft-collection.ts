@@ -27,7 +27,7 @@ async function main() {
 
         console.log("Loaded user:", user.publicKey.toBase58());
 
-        const umi = createUmi(connection);
+        const umi = createUmi(clusterApiUrl("devnet")); // Fixed: pass URL directly instead of connection
         const umiKeypair = umi.eddsa.createKeypairFromSecretKey(user.secretKey);
         
         umi
@@ -40,7 +40,7 @@ async function main() {
         
         try {
             const buffer = await fs.readFile(collectionImagePath);
-            let file = createGenericFile(buffer, collectionImagePath, {
+            let file = createGenericFile(buffer, "collection.png", { // Fixed: use filename only
                 contentType: "image/png",
             });
             
