@@ -34,10 +34,10 @@ import {
   const umi = createUmi(connection);
    
   // Substitute in your collection NFT address from create-metaplex-nft-collection.ts
-  const collectionAddress = UMIPublicKey("");
+  const collectionAddress = UMIPublicKey("8sGP4hiX7damFpk7BXMZLFCcJT24ktxvjSJUAJdbkcFu");
    
   // Substitute in your NFT address from create-metaplex-nft.ts
-  const nftAddress = UMIPublicKey("");
+  const nftAddress = UMIPublicKey("34m4FAxT2UqaCnXT1b7yyXKVWM6kHMHL4fEDE8SQzbpD");
 
   // Verify our collection as a Certified Collection
 // See https://developers.metaplex.com/token-metadata/collections
